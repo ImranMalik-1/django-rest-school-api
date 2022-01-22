@@ -3,17 +3,20 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 import environ
 env = environ.Env()
 environ.Env.read_env()
 
 SECRET_KEY = env('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
-ALLOWED_HOSTS = []
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -28,7 +31,8 @@ INSTALLED_APPS = [
     'django_filters',
     'rest_framework',
     'schoolManagementApp.apps.SchoolmanagementappConfig',
-    'knox'
+    'knox',
+    'whitenoise.runserver_nostatic'
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -41,6 +45,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'djangoAPI.urls'
@@ -140,3 +145,5 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 50,
     'DEFAULT_AUTHENTICATION_CLASSES':('knox.auth.TokenAuthentication',)
 }
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
