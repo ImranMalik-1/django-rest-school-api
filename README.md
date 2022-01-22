@@ -1,4 +1,4 @@
-# djang-rest-school-api
+# django-rest-school-api
 
 
 ## Project Overview;
