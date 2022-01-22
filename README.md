@@ -6,6 +6,7 @@
 1. This is a small rest-api app for management of schools and its students. 
 2. You can perform CRUD operations on schools and students and each student belongs to a school, so a student cannot exist without a school.
 3. Deployed on Heroku so you can test it
+4. It follows all the guidelines and tech stack mentioned in https://manatal.notion.site/API-School-Students-Test-description-d55d5b547f344f888d904ae1c4cbef7a
 
 ## Api Reference:
 
@@ -86,3 +87,12 @@ https://school-app-imran.herokuapp.com/
           "username": "imran@getnada.com",  
           "password": "123"  
 
+
+## Time taken in project
+1. project setup/settings with postgress and installing depedencies (2 - 3 hours)
+2. architechture design with keys and relations (1 hour)
+3. django models and serializers (1 hour)
+4. schools/students views (2 - 3 hours)
+5. nested routers (0.5 - 1 hour)
+6. authentication setup/models/views (1 hour)
+7. deploying on heroku (1 hour)
