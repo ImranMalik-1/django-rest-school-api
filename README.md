@@ -35,7 +35,7 @@ https://school-app-imran.herokuapp.com/
            "school_name": "Test School Name"  
            "maximum_number_of_students": 15 (not required, default is 50)  
     
-2. Perform nested CRUD operations for students (belonging to schools)
+2. Perform CRUD operations for students
 
           desciption: create student object  
           URL: https://school-app-imran.herokuapp.com/students/  
@@ -58,6 +58,16 @@ https://school-app-imran.herokuapp.com/
           Student:  
           filter fields = 'first_name'  
           search fields = 'first_name', 'id'  
+
+4. Perform Nested CRUD operations for students (belonging to schools)
+
+          desciption: create student object for a school  
+          URL: https://school-app-imran.herokuapp.com/schools/<school_id>/students/<student_id/    
+          method: POST  
+          Form Data Fields:  
+          "first_name": "Test first name"  
+          "last_name": "test last name"  
+          "school": "school id"  
     
 **NOTE: Only form form data is accepted into requests (from postman) text/plain data is not unsupported!  
   
