@@ -9,7 +9,7 @@
 
 ## Api Reference:
 
-This api supports : get, post, put, path, delete for schools and studentes along with nested operations for students belonging to schools.
+This api supports : get, post, put, path, delete for schools and students along with nested operations for students belonging to schools.
 
 => Urls (to test with browser):
 You can visit this main url which will guide you further with 
