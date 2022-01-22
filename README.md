@@ -26,7 +26,7 @@ https://school-app-imran.herokuapp.com/
 
 ## Api Features:
 
-1. Perform CRUD operations for schools and students  
+1. Perform CRUD operations for schools    
      
           desciption: create school object  
           URL: https://school-app-imran.herokuapp.com/schools/  
