@@ -6,7 +6,6 @@
 1. This is a small rest-api app for management of schools and its students. 
 2. You can perform CRUD operations on schools and students and each student belongs to a school, so a student cannot exist without a school.
 3. Deployed on Heroku so you can test it
-4. It follows all the guidelines and tech stack mentioned in https://manatal.notion.site/API-School-Students-Test-description-d55d5b547f344f888d904ae1c4cbef7a
 
 ## Api Reference:
 
