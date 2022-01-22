@@ -37,8 +37,9 @@ https://school-app-imran.herokuapp.com/
     
 2. Perform nested CRUD operations for students (belonging to schools)
 
-          desciption: create stuent object  
+          desciption: create student object  
           URL: https://school-app-imran.herokuapp.com/students/  
+          method: POST  
           Form Data Fields:  
           "first_name": "Test first name"  
           "last_name": "test last name"  
