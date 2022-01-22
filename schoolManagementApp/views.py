@@ -96,8 +96,6 @@ class StudentViewSet(viewsets.ModelViewSet):
                  decription='maximum capacity for school reached, cannot add student'))
             else:
                 student_object = serializer.save()
-                school_object.enrolled_students_count += 1
-                school_object.save()
                 return Response(dict(status=201, id=student_object.id))
         else:
             return Response(serializer.errors)
@@ -109,8 +107,6 @@ class StudentViewSet(viewsets.ModelViewSet):
         if student:
             school_object = student.school
             if school_object:
-                school_object.enrolled_students_count -= 1
-                school_object.save()
                 student.delete()
                 return Response(dict(status=200, detail='DELETED'))
             else:
